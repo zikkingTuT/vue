@@ -9,7 +9,7 @@
       <button @click="incrementIfOdd">是奇数就+1</button>
       <button @click="incrementAsync">异步+1</button>
       <button @click="$store.dispatch('complex')">复杂的逻辑</button>
-      <h3>已完成的待办</h3>
+      <!-- <h3>已完成的待办</h3> -->
 <ul>
   <!-- <li v-for="item in $store.getters.doneTodos" :key="item.id">
     {{ item.content }}
