@@ -11,9 +11,9 @@
       <button @click="$store.dispatch('complex')">复杂的逻辑</button>
       <h3>已完成的待办</h3>
 <ul>
-  <li v-for="item in $store.getters.doneTodos" :key="item.id">
+  <!-- <li v-for="item in $store.getters.doneTodos" :key="item.id">
     {{ item.content }}
-  </li>
+  </li> -->
 </ul>
 
 <div>id为2的todo: {{ $store.getters.getTodoById(2) }}</div>

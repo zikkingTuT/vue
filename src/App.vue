@@ -6,7 +6,7 @@
 
 <script>
 import TheCounter from '@/views/TheCounter.vue'
-import { mapState,mapGetters,mapMutations,mapActions } from 'vuex'
+import { mapMutations,mapActions } from 'vuex'
 export default {
   name: 'App',
   components: {

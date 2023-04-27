@@ -10,33 +10,33 @@ export default {
     },
     // 修改数据的方法(同步)
     mutations: {
-      INCREMENT(state, value) {
+      INCREMENT(state) {
         state.count++
       },
-      DECREMENT(state, value) {
+      DECREMENT(state) {
         state.count--
       },
-      INCREMENTIFODD(state, value) {
+      INCREMENTIFODD(state) {
         state.count++
       },
-      INCREMENTASYNC(state, value) {
+      INCREMENTASYNC(state) {
         state.count++
       },
     },
     // 修改数据的方法(支持异步, 相当于中间件)
     actions: {
-      increment(ctx, value) {
+      increment(ctx) {
         ctx.commit('INCREMENT')
       },
-      decrement(ctx, value) {
+      decrement(ctx, ) {
         ctx.commit('DECREMENT')
       },
-      incrementIfOdd(ctx, value) {
+      incrementIfOdd(ctx, ) {
         if (ctx.state.count % 2) {
           ctx.commit('INCREMENTIFODD')
         }
       },
-      incrementAsync(ctx, value) {
+      incrementAsync(ctx, ) {
         setTimeout(() => {
           ctx.commit('INCREMENTASYNC')
         }, 1000)
