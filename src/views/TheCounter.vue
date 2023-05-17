@@ -16,7 +16,7 @@
   </li> -->
 </ul>
 
-<div>id为2的todo: {{ $store.getters.getTodoById(2) }}</div>
+<!-- <div>id为2的todo: {{ $store.getters.getTodoById(2) }}</div> -->
     </div>
   </template>
   

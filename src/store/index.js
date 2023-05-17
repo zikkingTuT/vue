@@ -6,7 +6,7 @@ Vue.use(Vuex)
 // vuex本质上是vue的一个插件, 通过Vue.use()注册
 // 上所有的vue实例上挂载$store
 //Vue.use(Vuex)
-
+//可以将多个进行拆分各个专用的
 
 export default new Vuex.Store({
   state: {
@@ -29,8 +29,9 @@ export default new Vuex.Store({
       }
     },
   },
-
+//处理同步任务
   mutations: {
+   //加减乘除
     INCREMENT(state, value) {
       console.log(state,'value---->',value)
       state.count += value
