@@ -1,17 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-import TheCounter from '@/views/TheCounter.vue'
+// 导入路由对象
+import TodoView from '@/views/TodoView'
+import ArticleView from '@/views/ArticleView'
+// import TheCounter from '@/views/TheCounter.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   
-  {
-    path: '/',
-    name: '',
-    component: TheCounter
-  },
+  // {
+  //   path: '/',
+  //   name: '',
+  //   component: TheCounter
+  // },
+  { path: '/todo', component: TodoView },
+  { path: '/article', component: ArticleView },
   // {
   //   path: '/about',
   //   name: 'about',

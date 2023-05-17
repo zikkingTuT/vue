@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 1. 引入vue.js 和 vue-router.js -->
+    <script src="https://unpkg.com/vue@2"></script>
+    <!-- vue@3 对应 vue-router@4版本对应 -->
+    <!-- <script src="https://unpkg.com/vue-router@3"></script> -->
+
+       <!-- 
+    思路
+      1. 完成vue.js的三步曲
+        a. 引入vue.js
+        b. 创建页面容器
+        c. 实例vue实例
+      2. 使用vue-router管理路由
+        a. 引入vue-router.js
+        b. 定义组件对象
+        c. 定义路由规则
+        d. 创建路由对象
+        e. 挂载到根实例
+      3. 改造HTML
+        a. 编写路由链接router-link
+        b. 编写路由出口router-view
+   -->
+  </head>
+  <body>
+
+    <!-- 2. 编写页面容器 -->
+    <div id="app">
+        <!-- 配置链接 -->
+        <router-link to="/home">home</router-link>
+        <router-link to="/about">about</router-link>
+        <!-- 配置路由出口 -->
+        <router-view></router-view>
+    </div>
+
+    <!-- 3. 实例化对象 -->
+    <script>
+// 准备组件
+        const TheHome = {
+        template: '<div>Home子组件</div>',
+      }
+      const TheAbout = {
+        template: '<div>About子组件</div>',
+      }
+    // 2. 创建路由对象
+    const router = new VueRouter({
+        // 路由规则: url=>组件
+        routes: [
+          { path: '/home', component: TheHome },
+          { path: '/about', component: TheAbout },
+        ],
+      })
+      const vm = new Vue({
+        el: '#app',
+      })
+    </script>
+  </body>
+</html>
